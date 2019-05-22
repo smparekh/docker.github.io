@@ -12,7 +12,7 @@ To adjust the stop signal and period, use the `stop-signal` and `stop-grace-peri
 to set the stop signal to `SIGTERM` and grace period to ten (10) seconds, use the following command:
 
 ```bash
-$> docker service update --stop-signal=SIGTERM --stop-grace-period=10s interlock-proxy
+$> docker service update --stop-signal=SIGTERM --stop-grace-period=10s ucp-interlock-proxy
 ```
 
 ## Update actions
@@ -21,7 +21,7 @@ without operator intervention.  You can change this behavior using the `update-f
 to automatically rollback to the previous configuration upon failure, use the following command:
 
 ```bash
-$> docker service update --update-failure-action=rollback interlock-proxy
+$> docker service update --update-failure-action=rollback ucp-interlock-proxy
 ```
 
 ## Update interval
@@ -30,5 +30,5 @@ updates, such as to let a service settle, use the `update-delay` setting.  For e
 thirty (30) seconds between updates, use the following command:
 
 ```bash
-$> docker service update --update-delay=30s interlock=proxy
+$> docker service update --update-delay=30s ucp-interlock-proxy
 ```
